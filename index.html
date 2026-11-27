@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5e5e9">
+<title>Un regalo para ti | Yulika Correa Salon & Spa</title>
+<style>
+:root{--rose:#d7a5b2;--rose2:#f0d2d9;--wine:#926775;--gold:#c5a16b;--cream:#fffaf7;--ink:#765660}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;min-height:100svh;background:radial-gradient(circle at 50% 15%,#fff 0,#faeef1 48%,#edd6dd 100%);color:var(--ink);font-family:Georgia,serif;display:grid;place-items:center;padding:20px;overflow-x:hidden}
+main{width:min(100%,440px);min-height:min(780px,94svh);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;padding:28px 16px}
+.eyebrow{font:10px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#a17b85;margin-bottom:18px}
+h1{font-size:clamp(29px,8vw,38px);font-weight:400;line-height:1.16;margin:0 0 12px}
+.intro{font:13px/1.7 Arial,sans-serif;color:#90737b;max-width:280px;margin:0 auto}
+.gift{height:300px;width:300px;max-width:100%;position:relative;margin:14px auto 8px}
+.spark{position:absolute;color:var(--gold);font-size:22px;animation:twinkle 1.8s infinite}.a{top:30px;left:26px}.b{top:78px;right:18px;animation-delay:.6s}.c{bottom:35px;left:24px;animation-delay:1s}
+.base{position:absolute;bottom:38px;left:55px;width:190px;height:140px;border-radius:8px 8px 15px 15px;background:linear-gradient(110deg,#d5a0ae,#f0cbd4 50%,#d19aa9);box-shadow:0 20px 30px #986b762e}
+.base:after{content:"";position:absolute;left:82px;top:0;width:27px;height:100%;background:linear-gradient(90deg,#b38d55,#f2dba9,#b38d55)}
+.lid{position:absolute;z-index:3;left:41px;bottom:164px;width:218px;height:46px;border-radius:8px;background:linear-gradient(110deg,#d3a0ad,#f4d6dc 50%,#ce96a5);box-shadow:0 8px 12px #986b7633;transform-origin:12% 90%;transition:transform 1s cubic-bezier(.2,.8,.2,1),opacity .7s}
+.lid:after{content:"";position:absolute;left:96px;top:0;width:27px;height:100%;background:linear-gradient(90deg,#b38d55,#f2dba9,#b38d55)}
+.bow{position:absolute;z-index:4;left:128px;bottom:197px;width:64px;height:45px;transition:opacity .35s,transform .5s}
+.bow:before,.bow:after{content:"";position:absolute;width:34px;height:25px;border:8px solid var(--gold);border-radius:50% 50% 10% 50%;top:0}
+.bow:before{left:0;transform:rotate(25deg)}.bow:after{right:0;transform:scaleX(-1) rotate(25deg)}
+.bow i{position:absolute;left:26px;top:17px;width:13px;height:17px;border-radius:3px;background:var(--gold)}
+.strip{position:absolute;z-index:2;left:145px;bottom:72px;width:9px;height:110px;background:linear-gradient(90deg,#b38d55,#f2dba9,#b38d55);transition:opacity .3s}
+button,.claim{border:0;border-radius:50px;padding:16px 28px;background:linear-gradient(110deg,#956977,#bd8d9b);color:#fff;font:10px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 10px 22px #93657535;cursor:pointer;text-decoration:none;display:inline-block}
+button:focus-visible,.claim:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.hint{font:10px Arial,sans-serif;letter-spacing:.13em;color:#a4868d;margin-top:15px}
+.foot{font:10px Arial,sans-serif;color:#a98e94;margin-top:26px}
+.scrim{position:fixed;inset:0;background:#533b444d;opacity:0;visibility:hidden;transition:opacity .4s;z-index:5}
+.bono{position:fixed;z-index:6;left:50%;top:50%;width:min(88vw,360px);max-height:88svh;overflow:auto;padding:34px 24px;background:linear-gradient(145deg,#fffdfa,#f9e9ed);border:1px solid #d9bb91;box-shadow:0 22px 70px #68465355;text-align:center;opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,-42%) scale(.72);transition:opacity .55s,transform .65s cubic-bezier(.2,.8,.2,1),visibility .55s}
+.bono:before{content:"";position:absolute;inset:8px;border:1px solid #e6d2b8;pointer-events:none}
+.bono>*{position:relative}.tiny{font:10px Arial,sans-serif;letter-spacing:.23em;text-transform:uppercase;color:#a17b65}
+.bono h2{font-size:28px;font-weight:400;margin:15px 0 7px}
+.amount{font-size:clamp(48px,14vw,62px);line-height:1.1;color:#a97865;margin:12px 0 5px}
+.bono p{font:12px/1.75 Arial,sans-serif;color:#886e72;max-width:250px;margin:10px auto}
+.brand{font:10px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;color:#96716e;margin-top:20px}
+.claim{margin-top:20px;padding:15px 19px;font-size:10px}
+.open .lid{transform:translate(-28px,-125px) rotate(-28deg)}
+.open .bow,.open .strip{opacity:0}
+.open .scrim{opacity:1;visibility:visible}
+.open .bono{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+.open #open{opacity:0;visibility:hidden;pointer-events:none}
+@keyframes twinkle{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main id="scene">
+  <div class="eyebrow">Yulika Correa Salon &amp; Spa</div>
+  <h1>Hay una sorpresa<br>especial para ti</h1>
+  <p class="intro">Alguien preparó un detalle para regalarte un momento especial.</p>
+  <div class="gift" aria-label="Caja de regalo rosa con cinta dorada">
+    <span class="spark a">✦</span><span class="spark b">✧</span><span class="spark c">✦</span>
+    <div class="base"></div><div class="strip"></div><div class="lid"></div><div class="bow"><i></i></div>
+  </div>
+  <button id="open" type="button" aria-controls="bono" aria-expanded="false">Abrir mi regalo</button>
+  <div class="hint">TOCA EL BOTÓN PARA DESCUBRIR TU SORPRESA</div>
+  <div class="foot">Un regalo pensado especialmente para ti ♡</div>
+</main>
+<div class="scrim" id="scrim" aria-hidden="true"></div>
+<section class="bono" id="bono" role="dialog" aria-modal="true" aria-labelledby="title" tabindex="-1">
+  <div class="tiny">Un detalle para ti</div>
+  <h2 id="title">¡Sorpresa!</h2>
+  <div class="amount">$50.000</div>
+  <div class="tiny">Bono de regalo</div>
+  <p>Disfruta este regalo en<br><strong>Yulika Correa Salon &amp; Spa</strong>.</p>
+  <p>Un momento para consentirte, porque te lo mereces.</p>
+  <div class="brand">Con cariño · Yulika Correa</div>
+  <a class="claim" href="https://walink.co/7ubiud" target="_blank" rel="noopener noreferrer">Reclamar mi regalo</a>
+</section>
+<script>
+(function(){
+ const scene=document.getElementById('scene');
+ const open=document.getElementById('open');
+ const bono=document.getElementById('bono');
+ open.addEventListener('click',function(){
+   scene.classList.add('open');
+   open.setAttribute('aria-expanded','true');
+   bono.focus({preventScroll:true});
+ });
+ document.getElementById('scrim').addEventListener('click',function(){
+   scene.classList.remove('open');
+   open.setAttribute('aria-expanded','false');
+   open.focus({preventScroll:true});
+ });
+ document.addEventListener('keydown',function(e){
+   if(e.key==='Escape' && scene.classList.contains('open')){
+     scene.classList.remove('open');
+     open.setAttribute('aria-expanded','false');
+     open.focus({preventScroll:true});
+   }
+ });
+})();
+</script>
+</body>
+</html>
