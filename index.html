@@ -76,17 +76,17 @@ button:focus-visible,.claim:focus-visible{outline:3px solid var(--gold);outline-
  const open=document.getElementById('open');
  const bono=document.getElementById('bono');
  open.addEventListener('click',function(){
-   scene.classList.add('open');
+   document.body.classList.add('open');
    open.setAttribute('aria-expanded','true');
    bono.focus({preventScroll:true});
  });
  document.getElementById('scrim').addEventListener('click',function(){
-   scene.classList.remove('open');
+   document.body.classList.remove('open');
    open.setAttribute('aria-expanded','false');
    open.focus({preventScroll:true});
  });
  document.addEventListener('keydown',function(e){
-   if(e.key==='Escape' && scene.classList.contains('open')){
+   if(e.key==='Escape' && document.body.classList.contains('open')){
      scene.classList.remove('open');
      open.setAttribute('aria-expanded','false');
      open.focus({preventScroll:true});
