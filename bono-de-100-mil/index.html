@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7e8ed">
+<title>Bono de 100 mil | Yulika Correa Salon & Spa</title>
+<style>
+:root{--rose:#d7a5b2;--wine:#926775;--gold:#c5a16b}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;min-height:100svh;background:radial-gradient(circle at 50% 18%,#fff 0,#faeef1 48%,#edd6dd 100%);color:#765660;font-family:Georgia,serif}
+#scene{width:min(100%,480px);min-height:100vh;min-height:100svh;margin:auto;padding:42px 22px 34px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.eyebrow{font:10px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#a17b85;margin-bottom:28px}
+h1{font-size:clamp(30px,8vw,40px);font-weight:400;line-height:1.14;margin:0 0 14px}
+.intro{font:14px/1.65 Arial,sans-serif;color:#90737b;max-width:300px;margin:0 auto}
+.gift{height:245px;width:290px;max-width:100%;position:relative;margin:20px auto 20px;flex:none}
+.spark{position:absolute;color:var(--gold);font-size:22px;animation:twinkle 1.8s infinite}.a{top:18px;left:10px}.b{top:58px;right:6px;animation-delay:.6s}.c{bottom:15px;left:15px;animation-delay:1s}
+.base{position:absolute;bottom:22px;left:50px;width:190px;height:135px;border-radius:8px 8px 15px 15px;background:linear-gradient(110deg,#d5a0ae,#f0cbd4 50%,#d19aa9);box-shadow:0 18px 26px #986b762e}
+.base:after{content:"";position:absolute;left:82px;top:0;width:27px;height:100%;background:linear-gradient(90deg,#b38d55,#f2dba9,#b38d55)}
+.lid{position:absolute;z-index:3;left:36px;bottom:154px;width:218px;height:44px;border-radius:8px;background:linear-gradient(110deg,#d3a0ad,#f4d6dc 50%,#ce96a5);box-shadow:0 8px 12px #986b7633;transform-origin:12% 90%;transition:transform .85s cubic-bezier(.2,.8,.2,1)}
+.lid:after{content:"";position:absolute;left:96px;top:0;width:27px;height:100%;background:linear-gradient(90deg,#b38d55,#f2dba9,#b38d55)}
+.bow{position:absolute;z-index:4;left:123px;bottom:187px;width:64px;height:45px;transition:opacity .3s}
+.bow:before,.bow:after{content:"";position:absolute;width:34px;height:25px;border:8px solid var(--gold);border-radius:50% 50% 10% 50%;top:0}
+.bow:before{left:0;transform:rotate(25deg)}.bow:after{right:0;transform:scaleX(-1) rotate(25deg)}
+.bow i{position:absolute;left:26px;top:17px;width:13px;height:17px;border-radius:3px;background:var(--gold)}
+.strip{position:absolute;z-index:2;left:141px;bottom:44px;width:9px;height:113px;background:linear-gradient(90deg,#b38d55,#f2dba9,#b38d55);transition:opacity .3s}
+#open,.claim{border:0;border-radius:50px;padding:17px 30px;background:linear-gradient(110deg,#956977,#bd8d9b);color:#fff;font:11px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;box-shadow:0 10px 22px #93657535;cursor:pointer;text-decoration:none;display:inline-block}
+#open{position:relative;z-index:2;margin-top:4px}
+.hint{font:10px Arial,sans-serif;letter-spacing:.12em;color:#a4868d;margin-top:17px}
+.foot{font:11px Arial,sans-serif;color:#a98e94;margin-top:22px}
+#scrim{position:fixed;inset:0;background:#533b446d;opacity:0;visibility:hidden;z-index:10;transition:opacity .35s,visibility .35s}
+#bono{position:fixed;z-index:11;left:50%;top:50%;width:min(88vw,360px);max-height:85svh;overflow:auto;padding:38px 25px;background:linear-gradient(145deg,#fffdfa,#f9e9ed);border:1px solid #d9bb91;box-shadow:0 22px 70px #68465355;text-align:center;opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,-44%) scale(.82);transition:opacity .4s,transform .45s,visibility .4s}
+#bono:before{content:"";position:absolute;inset:8px;border:1px solid #e6d2b8;pointer-events:none}
+#bono>*{position:relative}
+.tiny{font:10px Arial,sans-serif;letter-spacing:.23em;text-transform:uppercase;color:#a17b65}
+#bono h2{font-size:29px;font-weight:400;margin:16px 0 8px}
+.amount{font-size:clamp(52px,15vw,64px);line-height:1.1;color:#a97865;margin:14px 0 6px}
+#bono p{font:13px/1.7 Arial,sans-serif;color:#886e72;max-width:260px;margin:12px auto}
+.brand{font:10px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;color:#96716e;margin-top:22px}
+.claim{margin-top:22px;padding:16px 20px;font-size:10px}
+#scene.open .lid{transform:translate(-28px,-105px) rotate(-28deg)}
+#scene.open .bow,#scene.open .strip{opacity:0}
+#scene.open #open,#scene.open .hint,#scene.open .foot{opacity:0;pointer-events:none}
+body.show-bono #scrim{opacity:1;visibility:visible}
+body.show-bono #bono{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+@keyframes twinkle{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+@media(max-height:700px){#scene{padding-top:22px;padding-bottom:20px}.eyebrow{margin-bottom:15px}.gift{height:200px;margin:12px auto}.base{bottom:15px}.lid{bottom:132px}.bow{bottom:165px}.strip{bottom:37px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main id="scene">
+<div class="eyebrow">Yulika Correa Salon &amp; Spa</div>
+<h1>Hay una sorpresa<br>especial para ti</h1>
+<p class="intro">Alguien preparó un detalle para regalarte un momento especial.</p>
+<div class="gift" aria-label="Caja de regalo rosa con cinta dorada">
+<span class="spark a">✦</span><span class="spark b">✧</span><span class="spark c">✦</span>
+<div class="base"></div><div class="strip"></div><div class="lid"></div><div class="bow"><i></i></div>
+</div>
+<button id="open" type="button" aria-expanded="false">Abrir mi regalo</button>
+<div class="hint">TOCA EL BOTÓN PARA DESCUBRIR TU SORPRESA</div>
+<div class="foot">Un regalo pensado especialmente para ti ♡</div>
+</main>
+<div id="scrim" aria-hidden="true"></div>
+<section id="bono" role="dialog" aria-modal="true" aria-labelledby="title">
+<div class="tiny">Un detalle para ti</div><h2 id="title">¡Tu regalo especial!</h2>
+<div class="amount">$100.000</div><div class="tiny">Bono de regalo</div>
+<p>Disfruta este regalo en<br><strong>Yulika Correa Salon &amp; Spa</strong>.</p>
+<p>Un momento para consentirte, porque te lo mereces.</p>
+<div class="brand">Con cariño · Yulika Correa</div>
+<a class="claim" href="https://walink.co/7ubiud" target="_blank" rel="noopener noreferrer">Reclamar mi regalo</a>
+</section>
+<script>
+(function(){
+ const scene=document.getElementById('scene');
+ const button=document.getElementById('open');
+ const reveal=()=>{scene.classList.add('open');document.body.classList.add('show-bono');button.setAttribute('aria-expanded','true');};
+ const close=()=>{scene.classList.remove('open');document.body.classList.remove('show-bono');button.setAttribute('aria-expanded','false');};
+ button.addEventListener('click',reveal);
+ document.getElementById('scrim').addEventListener('click',close);
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+})();
+</script>
+</body></html>
